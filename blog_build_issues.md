@@ -1,8 +1,8 @@
 ---
 title: "搭建Blog以及持续集成遇到的一些问题"
-date: 2021-03-15
-publishdate: 2021-03-15
-lastmod: 2021-03-15
+date: 2021-03-14
+publishdate: 2021-03-14
+lastmod: 2021-03-14
 draft: false
 tags: ["website"]
 ---
