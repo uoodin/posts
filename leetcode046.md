@@ -60,4 +60,38 @@ func traversal(has []bool, cur []int, depth int, nums []int) {
 		}
 	}
 }
+
+
+```
+
+```
+//解法2,传slice指针,解决append问题
+func permute(nums []int) [][]int {
+	res := make([][]int, 0)
+	has := make([]bool, len(nums))
+	cur := make([]int, 0)
+	traversal(has, &cur, 0, nums, &res)
+	return res
+}
+
+
+func traversal(has []bool, cur *[]int, depth int, nums []int, res *[][]int) {
+	if depth == len(nums) {
+		size := len(*cur)
+		var dest = make([]int, size)
+		copy(dest, *cur)
+		*res = append(*res, dest)
+		return
+	}
+	for i := 0; i < len(nums); i++ {
+		v := nums[i]
+		if !has[i] {
+			has[i] = true
+			*cur = append(*cur, v)
+			traversal(has, cur, depth+1, nums, res)
+			has[i] = false
+			*cur = (*cur)[:len(*cur)-1]
+		}
+	}
+}
 ```
