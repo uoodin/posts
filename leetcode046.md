@@ -1,5 +1,5 @@
 ---
-title: "数组全部排列组合DFS"
+title: "数组全部排列组合"
 date: 2021-03-16
 publishdate: 2021-03-16
 lastmod: 2021-03-16
