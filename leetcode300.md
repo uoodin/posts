@@ -1,7 +1,7 @@
 ---
 title: "最长递增子序列"
 date: 2021-04-01
-publishdate: 2021-04-11
+publishdate: 2021-04-01
 lastmod: 2021-04-01
 draft: false
 tags: ["Algorithm"]
