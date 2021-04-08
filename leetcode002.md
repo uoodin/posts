@@ -15,7 +15,7 @@ tags: ["Algorithm"]
 你可以假设除了数字 0 之外，这两个数都不会以 0 开头。
 ```
 
-```
+```go
 func addTwoNumbers(l1 *ListNode, l2 *ListNode) *ListNode {
 
 	carry := 0

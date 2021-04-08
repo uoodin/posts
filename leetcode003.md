@@ -6,7 +6,7 @@ lastmod: 2021-03-17
 draft: false
 tags: ["Algorithm"]
 ---
-```
+```go
 /*
  * @lc app=leetcode.cn id=3 lang=golang
  *

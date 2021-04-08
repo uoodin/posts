@@ -42,7 +42,7 @@ B是A的子结构， 即 A中有出现和B相同的结构和节点值。
 著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。
 ```
 
-```
+```go
 /**
  * Definition for a binary tree node.
  * type TreeNode struct {

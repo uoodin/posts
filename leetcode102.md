@@ -8,7 +8,7 @@ tags: ["Algorithm"]
 ---
 
 ### 二叉树层序遍历
-```go {linenos=table}
+```go
 func levelOrder(root *TreeNode) [][]int {
 	if root == nil {
 		return nil
@@ -33,8 +33,8 @@ func traver(root *TreeNode, depth int, res *[][]int) {
 
 ```
 ### 二叉树锯齿层序遍历(Z字型)
-```go {linenos=table}
-unc zigzagLevelOrder(root *TreeNode) [][]int {
+```go
+func zigzagLevelOrder(root *TreeNode) [][]int {
 	if root == nil {
 		return nil
 	}

@@ -24,7 +24,7 @@ tags: ["Algorithm"]
 ]
 ```
 
-```
+```go
 var res [][]int
 
 func permute(nums []int) [][]int {
@@ -64,7 +64,7 @@ func traversal(has []bool, cur []int, depth int, nums []int) {
 
 ```
 
-```
+```go
 //解法2,传slice指针,解决append问题
 func permute(nums []int) [][]int {
 	res := make([][]int, 0)

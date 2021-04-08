@@ -37,7 +37,7 @@ tags: ["Algorithm"]
 s 仅由数字和英文字母（大写和/或小写）组成
 ```
 
-```
+```go
 package main
 
 import "fmt"
