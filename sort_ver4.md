@@ -7,7 +7,7 @@ draft: false
 tags: ["Algorithm"]
 ---
 
-```
+```Java
 class Solution {
     //快排,时间复杂度，一般情况下O(nlogn),最差O(n^2),空间复杂度最好情况下O(logn),最坏O(n)
     public int[] sortArray(int[] nums) {
