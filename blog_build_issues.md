@@ -28,8 +28,14 @@ tags: ["website"]
       - shell脚本权限,如何处理 exit status 255
     - webhook
       - 如何用jobs,bg,nohup等命令执行后台任务
+      ```
+      nohup webhook -hooks hooks.json -verbose > webhook.log &
+      ```
       - webhook如何指定SSL私钥访问，防止被刷接口
+      - shell脚本权限 chmod a+x sync.sh
       
 ### Git
    - 如何管理多个ssh key?
+
+
 
