@@ -1,42 +1,101 @@
 ---
-title: "数组中重复的数据"
+title: "链表合集"
 date: 2022-02-16
 publishdate: 2022-02-16
 lastmod: 2022-02-16
 draft: false
 tags: ["Algorithm"]
 ---
-```
-给你一个长度为 n 的整数数组 nums ，
-其中 nums 的所有整数都在范围 [1, n] 内，
-且每个整数出现 一次 或 两次 。请你找出所有出现 两次 的整数，
-并以数组形式返回。
 
-你必须设计并实现一个时间复杂度为 O(n) 且仅使用常量额外空间的算法解决此问题。
+```
+将两个升序链表合并为一个新的 升序 链表并返回。新链表是通过拼接给定的两个链表的所有节点组成的。 
+```
+
+```java
+    //空间复杂度O1 时间复杂度O1
+    //声明一个假节点,两个list依次比较往里面加
+    //如果用list2往list1里面插入的话,也可以
+    public ListNode mergeTwoLists(ListNode list1, ListNode list2) {
+        ListNode dum = new ListNode(0);
+        ListNode res = dum;
+        while(list1 != null && list2 != null){
+            if(list1.val > list2.val) {
+                dum.next = list2;
+                dum = dum.next;
+                list2 = list2.next;
+            }else {
+                dum.next = list1;
+                dum = dum.next;
+                list1 = list1.next;
+            }
+        }
+
+        //剩下的节点都比当前的大,直接加
+        if(list1 == null) {
+            dum.next = list2;
+        } else {
+            dum.next = list1;
+        }
+        return res.next;
+    }
+```
+
+
+```
+给你单链表的头节点 head ，请你反转链表，并返回反转后的链表。
+```
+
+```java
+    //时间复杂度On 空间复杂度O1
+    //将节点依次往前指
+    public ListNode reverseList(ListNode head) {
+        ListNode pre = null;
+        ListNode cur = head;
+        while(cur != null) {
+            //保留下一个
+            ListNode temp = cur.next;
+            //指向前一个结点
+            cur.next = pre;
+            pre = cur;
+            cur = temp;
+        }
+        return pre;
+    }    
+    
+```
+
+```
+给你一个链表的头节点 head ，判断链表中是否有环。
+
+如果链表中有某个节点，可以通过连续跟踪 next 指针再次到达，则链表中存在环。 
+为了表示给定链表中的环，评测系统内部使用整数 pos 来表示链表尾连接到链表中的位置（索引从 0 开始）。
+注意：pos 不作为参数进行传递 。仅仅是为了标识链表的实际情况。
+
+如果链表中存在环 ，则返回 true 。 否则，返回 false 。
 ```
 ```java
-    public List<Integer> findDuplicates(int[] nums) {
-        //时间复杂度On 空间复杂度O1
-        List<Integer> res = new ArrayList<>();
-        for(int i = 0; i < nums.length; i++) {
-            //因为nums范围在 [1,n],所以将nums[i] 换到 i - 1位置上
-            //换过来的元素,如果不在自己的位置,要继续换
-            while(nums[i] != nums[nums[i] - 1]){
-                swap(i,nums[i] - 1,nums);
+    //时间复杂度On 空间复杂度O1
+   public boolean hasCycle(ListNode head) {
+        //快慢指针
+        //慢指针每次走一步
+        //快指针每次两步
+        //追及问题,如果快指针追上慢指针,有环
+        ListNode cur = head;
+        ListNode next = head;
+        while(cur != null){
+            cur = cur.next;
+            next = next.next;
+            if(next == null) {
+                return false;
+            }
+            next = next.next;
+            if(next == null) {
+                return false;
+            }
+            if(next == cur) {
+                return true;
             }
         }
-        //不在自己的位置的元素,就是重复的
-        for(int i = 0; i < nums.length; i++){
-            if(nums[i] - 1 != i){
-                res.add(nums[i]);
-            }
-        }
-        return res;
-    }
-
-    void swap(int src,int dest,int[] nums){
-        int temp = nums[src];
-        nums[src] = nums[dest];
-        nums[dest] = temp;
+        return false;
     }
 ```
