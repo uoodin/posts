@@ -10,4 +10,4 @@ tags: ["Algorithm"]
 - 前期线劣,对面小鱼无解肥,中期靠召唤物带线拉扯终于迎来了翻盘团战!
 - 兽王当诱饵,敲鼓吃技能,黄大佬双头龙扭转乾坤!
 
-![matuan](about/matuan.jpeg)
+![matuan](/about/matuan.jpeg)
