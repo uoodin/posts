@@ -1,8 +1,8 @@
 ---
 title: "删除链表倒数第N个结点"
-date: 2023=3-02-19
-publishdate: 2023-02-19
-lastmod: 2023-02-19
+date: 2023=3-02-20
+publishdate: 2023-02-20
+lastmod: 2023-02-20
 draft: false
 tags: ["Algorithm"]
 ---
