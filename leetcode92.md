@@ -7,6 +7,7 @@ draft: false
 tags: ["Algorithm"]
 ---
 ```java
+//时间复杂度On 空间复杂度O1
 public ListNode reverseBetween(ListNode head, int left, int right) {
         //声明一个虚拟节点,解决[1,3] 1 1 这种特殊的case,直接使用head节点无法通过
         ListNode dum = new ListNode(0,head);
